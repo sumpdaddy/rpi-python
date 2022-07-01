@@ -8,7 +8,9 @@ import adafruit_vl53l0x
 # Set up some functional details
 
 
+runtime=40      # the number of samples to use (1 second per)
 pitbottom=600   # the approximate bottom of the pit (in mm)
+startread=100   # the approximate 'safe' reading to start
 meas_file="/etc/sumpdaddy"
 
 # Initialize I2C bus and sensor.
@@ -24,24 +26,24 @@ vl53.measurement_timing_budget = 300000
 with vl53.continuous_mode():
 
     readingsum = 0
-    #  initialize the last good reading at 100mm
-    oldreading = 100
-    newreading = 100
+    #  initialize the last good reading with startread
+    oldreading = startread
+    newreading = startread
 
-    # loop for 40 seconds
-    for x in range(1,40):
-        # take the reading and subtract it from the bottom to get the height
+    # loop for x seconds
+    for x in range(1,runtime):
+        # take the range reading and subtract it from the bottom to get the height
         newreading = round(pitbottom-vl53.range,2)
-        # check the reading is realistic, if not then keep last good reading
-        if newreading < 25 or newreading > 425:
+        # check the reading is realistic (at least 25mm inside bounds), if not then keep last good reading
+        if newreading < 25 or newreading > (pitbottom-25):
             newreading = oldreading
-        # generate the average
+        # generate the running total to average later
         readingsum = readingsum + newreading
         oldreading = newreading
         time.sleep(1)
 
-    # calculate the reading and save it to the file
-    movingavg = str(readingsum/40)
+    # calculate the average reading and save it to the file
+    movingavg = str(readingsum/runtime)
     f = open(meas_file, "w")
     f.write(movingavg)
     f.close()
