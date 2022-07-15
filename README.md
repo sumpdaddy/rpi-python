@@ -26,7 +26,8 @@ Basic How-To
     7b. Crontab should look something like the attached file (Based on your home folder where you put the script)  
 8.  Add the cacti template to your system  
     8a. it is set up to assume your file goes to /etc/sumpdaddy, if you changed this in the python then also change it in the data input method for 'Sump Distacnce'  
-    8b. if you want metric units instead of freedom units simply edit the CDEF under Presets called 'mm to inch' and you can do 'mm to cm' or 'mm to mm' for all I care  
+    8b. The VL53L0X script saves a mm reading so use the mm template with it. The HC-SR04 uses the cm template
+    8b. if you are using the VL53L0X and want metric units instead of freedom units simply edit the CDEF under Presets called 'mm to inch' and you can do 'mm to cm' or 'mm to mm' for all I care  
 9.  Create a monitored device for your local system (plenty of good generic howtos exist)  
 10. Add the Sump Level graph to the device to start monitoring  
 11. Enjoy your nifty new sump graph  
