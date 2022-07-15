@@ -8,7 +8,7 @@ import adafruit_vl53l0x
 # Set up some functional details
 
 
-runtime=40      # the number of samples to use (1 second per)
+runtime=20      # the number of samples to use (1 second per)
 pitbottom=600   # the approximate bottom of the pit (in mm)
 startread=100   # the approximate 'safe' reading to start
 meas_file="/etc/sumpdaddy"

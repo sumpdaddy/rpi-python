@@ -5,7 +5,7 @@
 			<t_title></t_title>
 			<title>|host_description| - Sump level</title>
 			<t_vertical_label></t_vertical_label>
-			<vertical_label>Sump Level (mm)</vertical_label>
+			<vertical_label>Sump Level (in.)</vertical_label>
 			<t_image_format_id></t_image_format_id>
 			<image_format_id>1</image_format_id>
 			<t_height></t_height>
@@ -70,7 +70,7 @@
 				<color_id>F51D30</color_id>
 				<alpha>7F</alpha>
 				<consolidation_function_id>1</consolidation_function_id>
-				<cdef_id>0</cdef_id>
+				<cdef_id>hash_0501022b0e067ddb10933b50dfa6d01945e659</cdef_id>
 				<vdef_id>0</vdef_id>
 				<shift></shift>
 				<value></value>
@@ -89,7 +89,7 @@
 				<color_id>0</color_id>
 				<alpha>FF</alpha>
 				<consolidation_function_id>4</consolidation_function_id>
-				<cdef_id>0</cdef_id>
+				<cdef_id>hash_0501022b0e067ddb10933b50dfa6d01945e659</cdef_id>
 				<vdef_id>0</vdef_id>
 				<shift></shift>
 				<value></value>
@@ -108,7 +108,7 @@
 				<color_id>0</color_id>
 				<alpha>FF</alpha>
 				<consolidation_function_id>2</consolidation_function_id>
-				<cdef_id>0</cdef_id>
+				<cdef_id>hash_0501022b0e067ddb10933b50dfa6d01945e659</cdef_id>
 				<vdef_id>0</vdef_id>
 				<shift></shift>
 				<value></value>
@@ -127,11 +127,11 @@
 				<color_id>0</color_id>
 				<alpha>FF</alpha>
 				<consolidation_function_id>1</consolidation_function_id>
-				<cdef_id>0</cdef_id>
+				<cdef_id>hash_0501022b0e067ddb10933b50dfa6d01945e659</cdef_id>
 				<vdef_id>0</vdef_id>
 				<shift></shift>
 				<value></value>
-				<gprint_id>hash_06010219414480d6897c8731c7dc6c5310653e</gprint_id>
+				<gprint_id>hash_060102e9c43831e54eca8069317a2ce8c6f751</gprint_id>
 				<textalign></textalign>
 				<text_format>Average:</text_format>
 				<hard_return></hard_return>
@@ -146,11 +146,11 @@
 				<color_id>0</color_id>
 				<alpha>FF</alpha>
 				<consolidation_function_id>3</consolidation_function_id>
-				<cdef_id>0</cdef_id>
+				<cdef_id>hash_0501022b0e067ddb10933b50dfa6d01945e659</cdef_id>
 				<vdef_id>0</vdef_id>
 				<shift></shift>
 				<value></value>
-				<gprint_id>hash_06010219414480d6897c8731c7dc6c5310653e</gprint_id>
+				<gprint_id>hash_060102e9c43831e54eca8069317a2ce8c6f751</gprint_id>
 				<textalign></textalign>
 				<text_format>Maximum:</text_format>
 				<hard_return>on</hard_return>
@@ -165,7 +165,7 @@
 				<color_id>F51D30</color_id>
 				<alpha>FF</alpha>
 				<consolidation_function_id>3</consolidation_function_id>
-				<cdef_id>0</cdef_id>
+				<cdef_id>hash_0501022b0e067ddb10933b50dfa6d01945e659</cdef_id>
 				<vdef_id>0</vdef_id>
 				<shift></shift>
 				<value></value>
@@ -292,12 +292,28 @@
 			</item_003>
 		</items>
 	</hash_20010266d35da8f75c912ede3dbe901fedcae0>
+	<hash_0501022b0e067ddb10933b50dfa6d01945e659>
+		<name>mm to inch</name>
+		<items>
+			<hash_1401026b14530b56f23ec82a089060192f71fa>
+				<sequence>1</sequence>
+				<type>4</type>
+				<value>CURRENT_DATA_SOURCE</value>
+			</hash_1401026b14530b56f23ec82a089060192f71fa>
+			<hash_140102b4fce56fb4c2942c47266e404b697bb0>
+				<sequence>2</sequence>
+				<type>6</type>
+				<value>25.4</value>
+			</hash_140102b4fce56fb4c2942c47266e404b697bb0>
+			<hash_140102eee653869f5efd775ffd71824f61b5e4>
+				<sequence>3</sequence>
+				<type>2</type>
+				<value>4</value>
+			</hash_140102eee653869f5efd775ffd71824f61b5e4>
+		</items>
+	</hash_0501022b0e067ddb10933b50dfa6d01945e659>
 	<hash_060102e9c43831e54eca8069317a2ce8c6f751>
 		<name>Normal</name>
 		<gprint_text>%8.2lf %s</gprint_text>
 	</hash_060102e9c43831e54eca8069317a2ce8c6f751>
-	<hash_06010219414480d6897c8731c7dc6c5310653e>
-		<name>Exact Numbers</name>
-		<gprint_text>%8.0lf</gprint_text>
-	</hash_06010219414480d6897c8731c7dc6c5310653e>
 </cacti>
