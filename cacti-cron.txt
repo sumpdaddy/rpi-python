@@ -1,0 +1,3 @@
+MAILTO=root
+* * * * * www-data php /usr/share/cacti/site/poller.php 2>&1 >/dev/null | if [ -f /usr/bin/ts ] ; then ts ; else tee ; fi >> /var/log/cacti/poller-error.log
+* * * * * root python /home/pi/tof-measure.py 2>&1 >/dev/null | if [ -f /usr/bin/ts ] ; then ts ; else tee ; fi >> /var/log/cacti/tof-error.log
