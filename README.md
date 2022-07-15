@@ -18,6 +18,8 @@ Basic How-To
     3a. Install the adafruit I2C bus library 'pip3 install adafruit-circuitpython-busdevice'  
     3b. Install the adafruit VL53L0X library 'pip3 install adafruit-circuitpython-vl53l0x'  
 4.  Copy the python scripts (contin and measure) for the device you want to use to your system (works fine in the user home or other dir)  
+    4a. the VL53L0X time of flight lidar sensor uses the 'tof' scripts  
+    4b. the HC-SR04 ultrasonic sonar sensor uses the 'us' scripts  
 5.  Run the contin script to verify your readings are valid.  
     5a. the scripts assume the sensor is going to be about 60cm from the bottom of the pit (adjust the value in the measure script as needed)  
 6.  Install your device to your sump with the sensor pointing away from your face.  
