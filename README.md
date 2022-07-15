@@ -19,6 +19,7 @@ Basic How-To
     3b. Install the adafruit VL53L0X library 'pip3 install adafruit-circuitpython-vl53l0x'
 4.  Copy the python scripts (contin and measure) for the device you want to use to your system (works fine in the user home or other dir)
 5.  Run the contin script to verify your readings are valid.  
+    5a. the scripts assume the sensor is going to be about 60cm from the bottom of the pit (adjust the value in the measure script as needed)
 6.  Install your device to your sump with the sensor pointing away from your face.
 7.  Add the measure script to your cacti cron: 'sudo nano /etc/cron.d/cacti'
     7a. I like to also bump cacti to 1 min intervals here instead of 5min (just change cacti poller line to all stars)
